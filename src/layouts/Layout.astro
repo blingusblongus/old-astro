@@ -1,5 +1,8 @@
 ---
+import Header from '../components/Header.astro';
+import Showcase from '../components/Showcase.astro';
 import '../styles/global.scss';
+
 export interface Props {
     title: string;
 }
@@ -13,6 +16,8 @@ const {title}: Props = Astro.props;
         <title>{title}</title>
     </head>
     <body>
+        <Header />
+        <Showcase showExtra/>
         <slot />
     </body>
 </html>

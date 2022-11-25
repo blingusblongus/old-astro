@@ -1,0 +1,30 @@
+---
+import Card from "./Card.astro";
+
+const featuresData = [{
+    title: "Card 1",
+    body: "Here's stuff on card 1"
+},{
+    title: "Card 2",
+    body: "Here's stuff on card 2"
+},{
+    title: "Card 3",
+    body: "Here's stuff on card 3"
+}];
+---
+
+<section class="features">
+    <div class="container">
+       {featuresData.map(card => <Card title={card.title} body={card.body} />)}
+    </div>
+</section>
+
+<style>
+    .features .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 20px;
+        padding: 0 20px;
+        margin: 30px auto;
+    }
+</style>

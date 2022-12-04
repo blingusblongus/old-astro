@@ -1,5 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
+
+import logos from '../images/deploy-logos.png';
+import logosSmall from '../images/deploy-logos-small.png';
 ---
 
 <Layout title="About Astro">
@@ -35,8 +38,8 @@ import Layout from "../layouts/Layout.astro";
           </div>
           
           <h3>Deploy to anywhere, even the edge</h3>
-          <img class="logos" src="img/deploy-logos.png" alt="" />
-          <img class="logos-small" src="img/deploy-logos-small.png" alt="" />
+          <img class="logos" src={logos} alt="" />
+          <img class="logos-small" src={logosSmall} alt="" />
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
             doloribus, vel ipsum mollitia aliquid cumque commodi corrupti omnis

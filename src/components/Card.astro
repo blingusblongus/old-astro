@@ -1,16 +1,13 @@
 ---
 export interface Props {
-    title?: string;
-    body?: string;
     dark?: boolean;
 }
 
-const {title, body, dark=false} : Props = Astro.props;
+const {dark=false} : Props = Astro.props;
 ---
 
 <div class={`card ${dark && 'dark'}`}>
-    <h3>{title}</h3>
-    <p>{body}</p>
+    <slot />
 </div>
 
 <style>

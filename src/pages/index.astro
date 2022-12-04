@@ -1,8 +1,19 @@
 ---
-import Layout from '../layouts/Layout.astro';
-
+import Layout from "../layouts/Layout.astro";
+import Tabs from "../components/Tabs.astro";
+import Features from "../components/Features.astro";
+import Showcase from "../components/Showcase.astro";
 ---
 
 <Layout title="Hello">
-	<h1>Hello World</h1>
+	<Showcase showExtra />
+	<Features />
+	<Tabs
+		headings={["NPM", "PNPM", "YARN"]}
+		contents={[
+			"$ npm create astro@latest",
+			"$ pnpm create astro@latest",
+			"$ yarn create astro",
+		]}
+	/>
 </Layout>

@@ -5,15 +5,17 @@ import '../styles/global.scss';
 
 export interface Props {
     title: string;
+    icon?: string;
 }
 
-const {title}: Props = Astro.props;
+const {title, icon="../../public/favicon.ico"}: Props = Astro.props;
 ---
 
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <title>{title}</title>
+        <link rel="icon" href={icon} />
     </head>
     <body>
         <Header />

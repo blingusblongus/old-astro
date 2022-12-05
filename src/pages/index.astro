@@ -6,7 +6,10 @@ import Showcase from "../components/Showcase.astro";
 ---
 
 <Layout title="Hello">
-	<Showcase showExtra />
+	<Showcase 
+		heading="Well, fancy seeing you here" 
+		text="Thanks for stopping by ;)"
+	/>
 	<Features />
 	<Tabs
 		headings={["NPM", "PNPM", "YARN"]}

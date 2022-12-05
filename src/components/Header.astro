@@ -1,12 +1,12 @@
 ---
-import logo from '../images/logo.svg';
+import logo from '../images/blingus_small.png';
 ---
 
 <header class="header">
     <div class="container">
         <div class="logo">
             <a href="index.html">
-                <img src={logo} alt="" />
+                <img src={logo} alt=""/>
             </a>
         </div>
         <nav>
@@ -31,11 +31,15 @@ import logo from '../images/logo.svg';
   align-items: center;
   justify-content: space-between;
   padding: 0 20px;
+  overflow-y: clip;
 }
 
 .header img {
-  height: 35px;
-  vertical-align: middle;
+    height: 35px;
+    vertical-align: middle;
+    position: relative;
+    top: 2rem;
+    scale: 3;
 }
 
 .header nav ul {
@@ -49,4 +53,8 @@ import logo from '../images/logo.svg';
 .header nav ul li a {
   color: #fff;
 }
+
+/* .logo > a > img {
+    object-fit: contain;
+} */
 </style>

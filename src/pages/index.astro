@@ -8,15 +8,21 @@ import Showcase from "../components/Showcase.astro";
 <Layout title="Hello">
 	<Showcase 
 		heading="Well, fancy seeing you here" 
-		text="Thanks for stopping by ;)"
+		text="Thanks for stopping by ;) Not much here yet, but I'm working on it..."
 	/>
-	<Features />
-	<Tabs
+	<!-- <Features /> -->
+	<!-- <Tabs
 		headings={["NPM", "PNPM", "YARN"]}
 		contents={[
 			"$ npm create astro@latest",
 			"$ pnpm create astro@latest",
 			"$ yarn create astro",
 		]}
-	/>
+	/> -->
 </Layout>
+
+<style>
+	body {
+		background-color: var(--color-secondary);
+	}
+</style>

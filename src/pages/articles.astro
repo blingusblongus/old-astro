@@ -1,0 +1,26 @@
+---
+import Card from "../components/Card.astro";
+import Layout from "../layouts/Layout.astro";
+import Showcase from "../components/Showcase.astro";
+
+const posts = await Astro.glob('../pages/articles/*.md');
+const publishedPosts = posts.filter(post => {
+    const {draft, type} = post.frontmatter
+    return !draft;
+});
+---
+
+<Layout title="astro-blog">
+    <Showcase heading="" text="Games, Books, Movies, Shows, Whatever I can think of, really"/>
+    <section class="page-content">
+        <div class="container">
+            {publishedPosts.map(post => (
+                <Card>
+                    <h3>{post.frontmatter.title}</h3>
+                    <p>{post.frontmatter.tagline}</p>
+                    <a href={`/${post.frontmatter.slug}`} class="btn">Read More</a>  
+                </Card>
+                ))}
+        </div>
+    </section>
+</Layout>

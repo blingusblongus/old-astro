@@ -13,9 +13,9 @@ import Showcase from "../components/Showcase.astro";
 // }
 
 
-const posts = await Astro.glob('../posts/*.md');
+const posts = await Astro.glob('../pages/reviews/*.md');
 
-console.log(posts);
+console.log(posts.map(post => post.frontmatter));
 ---
 
 <Layout title="astro-blog">
@@ -33,7 +33,7 @@ console.log(posts);
             {posts.map(post => (
                 <Card>
                     <h3>{post.frontmatter.title}</h3>
-                    <p>{post.frontmatter.excerpt}</p>
+                    <p>{post.frontmatter.tagline}</p>
                     <a href={`/${post.frontmatter.slug}`} class="btn">Read More</a>  
                 </Card>
                 ))}

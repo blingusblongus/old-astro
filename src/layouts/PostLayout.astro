@@ -1,0 +1,20 @@
+---
+import Layout from "./Layout.astro";
+import Card from "../components/Card.astro";
+const {frontmatter} = Astro.props;
+---
+
+<Layout title={frontmatter.title}>
+    <section class="page-content">
+        <div class="container">
+            <Card>
+                <a class="btn" href="/blog">Go Back</a>
+                <h2>{frontmatter.title}</h2>
+                {frontmatter.tagline && <p style="font-style: italic">{frontmatter.tagline}</p>}
+                <hr/>
+                {frontmatter.date && <p>{new Date(frontmatter.date).toLocaleDateString()}</p>}
+                <slot />
+            </Card>
+        </div>
+    </section>
+</Layout>

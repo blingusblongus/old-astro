@@ -6,4 +6,5 @@ date: 2022-12-04
 author: John Doe
 ---
 
-This is the release update
+This is the release update.
+Will using contractions work on this one, or won't it?
